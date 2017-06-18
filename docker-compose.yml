@@ -1,0 +1,9 @@
+version: '2.1'
+
+services:
+  amazonlinux:
+    build: .
+    env_file: .env
+    volumes:
+      - .:${PROJ_PATH}
+    command: bash scripts/build

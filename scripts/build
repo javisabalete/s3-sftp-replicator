@@ -1,0 +1,9 @@
+#!/bin/bash
+
+pip install -r $PROJ_PATH/requeriments.txt
+
+zip -9 proj.zip lambda_function.py
+cd $PROJ_PATH/lib/python2.7/site-packages
+zip -r9 $PROJ_PATH/proj.zip *
+cd $PROJ_PATH/lib64/python2.7/site-packages
+zip -r9 $PROJ_PATH/proj.zip *
